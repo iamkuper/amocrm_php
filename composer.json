@@ -1,0 +1,18 @@
+{
+    "name": "iamkuper/amocrm",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Pavel Kupreev",
+            "email": "iamkuper@gmail.com"
+        }
+    ],
+    "autoload": {
+	  	"psr-4": {
+	        "AmoCRM\\Core\\": "core/",
+	        "AmoCRM\\Interfaces\\": "interfaces/",
+	        "AmoCRM\\Methods\\": "methods/"
+	    }
+	},
+    "require": {}
+}
