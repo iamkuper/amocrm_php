@@ -14,5 +14,7 @@
 	        "AmoCRM\\Methods\\": "methods/"
 	    }
 	},
-    "require": {}
+    "require": {
+      "ext-curl": "*"
+    }
 }

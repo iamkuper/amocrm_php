@@ -12,7 +12,6 @@ class API {
     // Defaults Statuses
     const STATUS_SUCCESS = 142;
     const STATUS_FAIL    = 143;
-    const CLOSED_STATUSES  = array( 142, 143 );
 
     // Users
     const USER_ROBOT = 0;
@@ -100,13 +99,6 @@ class API {
 
         $this->isAuth = true;
 
-    }
-
-    public static function formatPhone($phone) {
-        $phone = preg_replace('/[^0-9]/', '', $phone);
-        $phone = preg_replace('/^8/', '+7', $phone);
-        $phone = preg_replace('/^7/', '+7', $phone);
-        return $phone;
     }
 
     /**
