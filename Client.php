@@ -7,7 +7,7 @@ namespace AmoCRM;
  * @author iamkuper <iamkuper@gmail.com>
  * @since 2.0
  */
-class API {
+class Client {
 
     // Defaults Statuses
     const STATUS_SUCCESS = 142;
@@ -80,7 +80,7 @@ class API {
      * @param $login
      * @param $hash
      * @param $domain
-     * @throws Exception
+     * @throws \Exception
      */
     public function __construct($login, $hash, $domain, $ext = 'ru')
     {
@@ -94,7 +94,7 @@ class API {
         ));
 
         if(!isset($auth['auth'])) {
-            throw new Exception('u dont auth');
+            throw new \Exception('u dont auth');
         };
 
         $this->isAuth = true;
@@ -107,7 +107,7 @@ class API {
      * @return mixed
      */
     public function __call($name, $params) {
-        $className = '/AmoCRM/Methods/'.$name;
+        $className = '\\AmoCRM\\Methods\\' .$name;
         $params['domain'] = $this->domain;
         $params['ext'] = $this->ext;
         $object = new $className($params);
